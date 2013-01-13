@@ -1,0 +1,374 @@
+<DProject>
+ <ProjectGuid>{BCF18074-B869-4360-9756-AF4E4C4FB026}</ProjectGuid>
+ <Config name="Debug" platform="Win32">
+  <obj>0</obj>
+  <link>0</link>
+  <lib>1</lib>
+  <subsystem>0</subsystem>
+  <multiobj>0</multiobj>
+  <singleFileCompilation>0</singleFileCompilation>
+  <oneobj>0</oneobj>
+  <trace>0</trace>
+  <quiet>0</quiet>
+  <verbose>0</verbose>
+  <vtls>0</vtls>
+  <symdebug>1</symdebug>
+  <optimize>0</optimize>
+  <cpu>0</cpu>
+  <isX86_64>0</isX86_64>
+  <isLinux>0</isLinux>
+  <isOSX>0</isOSX>
+  <isWindows>0</isWindows>
+  <isFreeBSD>0</isFreeBSD>
+  <isSolaris>0</isSolaris>
+  <scheduler>0</scheduler>
+  <useDeprecated>0</useDeprecated>
+  <useAssert>0</useAssert>
+  <useInvariants>0</useInvariants>
+  <useIn>0</useIn>
+  <useOut>0</useOut>
+  <useArrayBounds>0</useArrayBounds>
+  <noboundscheck>0</noboundscheck>
+  <useSwitchError>0</useSwitchError>
+  <useUnitTests>0</useUnitTests>
+  <useInline>0</useInline>
+  <release>0</release>
+  <preservePaths>0</preservePaths>
+  <warnings>0</warnings>
+  <infowarnings>0</infowarnings>
+  <checkProperty>0</checkProperty>
+  <genStackFrame>0</genStackFrame>
+  <pic>0</pic>
+  <cov>0</cov>
+  <nofloat>0</nofloat>
+  <Dversion>2.043</Dversion>
+  <ignoreUnsupportedPragmas>0</ignoreUnsupportedPragmas>
+  <compiler>0</compiler>
+  <otherDMD>0</otherDMD>
+  <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
+  <imppath />
+  <fileImppath />
+  <outdir>$(ConfigurationName)</outdir>
+  <objdir>$(OutDir)</objdir>
+  <objname />
+  <libname />
+  <doDocComments>0</doDocComments>
+  <docdir />
+  <docname />
+  <modules_ddoc />
+  <ddocfiles />
+  <doHdrGeneration>0</doHdrGeneration>
+  <hdrdir />
+  <hdrname />
+  <doXGeneration>1</doXGeneration>
+  <xfilename>$(IntDir)\$(TargetName).json</xfilename>
+  <debuglevel>0</debuglevel>
+  <debugids />
+  <versionlevel>0</versionlevel>
+  <versionids />
+  <dump_source>0</dump_source>
+  <mapverbosity>0</mapverbosity>
+  <createImplib>0</createImplib>
+  <defaultlibname />
+  <debuglibname />
+  <moduleDepsFile />
+  <run>0</run>
+  <runargs />
+  <runCv2pdb>1</runCv2pdb>
+  <pathCv2pdb>$(VisualDInstallDir)cv2pdb\cv2pdb.exe</pathCv2pdb>
+  <cv2pdbPre2043>0</cv2pdbPre2043>
+  <cv2pdbNoDemangle>0</cv2pdbNoDemangle>
+  <cv2pdbEnumType>0</cv2pdbEnumType>
+  <cv2pdbOptions />
+  <objfiles />
+  <linkswitches />
+  <libfiles />
+  <libpaths />
+  <deffile />
+  <resfile />
+  <exefile>$(OutDir)\$(ProjectName).lib</exefile>
+  <useStdLibPath>1</useStdLibPath>
+  <additionalOptions />
+  <preBuildCommand />
+  <postBuildCommand />
+  <filesToClean>*.obj;*.cmd;*.build;*.json;*.dep</filesToClean>
+ </Config>
+ <Config name="Release" platform="Win32">
+  <obj>0</obj>
+  <link>0</link>
+  <lib>1</lib>
+  <subsystem>0</subsystem>
+  <multiobj>0</multiobj>
+  <singleFileCompilation>0</singleFileCompilation>
+  <oneobj>0</oneobj>
+  <trace>0</trace>
+  <quiet>0</quiet>
+  <verbose>0</verbose>
+  <vtls>0</vtls>
+  <symdebug>0</symdebug>
+  <optimize>0</optimize>
+  <cpu>0</cpu>
+  <isX86_64>0</isX86_64>
+  <isLinux>0</isLinux>
+  <isOSX>0</isOSX>
+  <isWindows>0</isWindows>
+  <isFreeBSD>0</isFreeBSD>
+  <isSolaris>0</isSolaris>
+  <scheduler>0</scheduler>
+  <useDeprecated>0</useDeprecated>
+  <useAssert>0</useAssert>
+  <useInvariants>0</useInvariants>
+  <useIn>0</useIn>
+  <useOut>0</useOut>
+  <useArrayBounds>0</useArrayBounds>
+  <noboundscheck>0</noboundscheck>
+  <useSwitchError>0</useSwitchError>
+  <useUnitTests>0</useUnitTests>
+  <useInline>0</useInline>
+  <release>1</release>
+  <preservePaths>0</preservePaths>
+  <warnings>0</warnings>
+  <infowarnings>0</infowarnings>
+  <checkProperty>0</checkProperty>
+  <genStackFrame>0</genStackFrame>
+  <pic>0</pic>
+  <cov>0</cov>
+  <nofloat>0</nofloat>
+  <Dversion>2.043</Dversion>
+  <ignoreUnsupportedPragmas>0</ignoreUnsupportedPragmas>
+  <compiler>0</compiler>
+  <otherDMD>0</otherDMD>
+  <program>$(DMDInstallDir)windows\bin\dmd.exe</program>
+  <imppath />
+  <fileImppath />
+  <outdir>$(ConfigurationName)</outdir>
+  <objdir>$(OutDir)</objdir>
+  <objname />
+  <libname />
+  <doDocComments>0</doDocComments>
+  <docdir />
+  <docname />
+  <modules_ddoc />
+  <ddocfiles />
+  <doHdrGeneration>0</doHdrGeneration>
+  <hdrdir />
+  <hdrname />
+  <doXGeneration>1</doXGeneration>
+  <xfilename>$(IntDir)\$(TargetName).json</xfilename>
+  <debuglevel>0</debuglevel>
+  <debugids />
+  <versionlevel>0</versionlevel>
+  <versionids />
+  <dump_source>0</dump_source>
+  <mapverbosity>0</mapverbosity>
+  <createImplib>0</createImplib>
+  <defaultlibname />
+  <debuglibname />
+  <moduleDepsFile />
+  <run>0</run>
+  <runargs />
+  <runCv2pdb>0</runCv2pdb>
+  <pathCv2pdb>$(VisualDInstallDir)cv2pdb\cv2pdb.exe</pathCv2pdb>
+  <cv2pdbPre2043>0</cv2pdbPre2043>
+  <cv2pdbNoDemangle>0</cv2pdbNoDemangle>
+  <cv2pdbEnumType>0</cv2pdbEnumType>
+  <cv2pdbOptions />
+  <objfiles />
+  <linkswitches />
+  <libfiles />
+  <libpaths />
+  <deffile />
+  <resfile />
+  <exefile>$(OutDir)\$(ProjectName).lib</exefile>
+  <useStdLibPath>1</useStdLibPath>
+  <additionalOptions />
+  <preBuildCommand />
+  <postBuildCommand />
+  <filesToClean>*.obj;*.cmd;*.build;*.json;*.dep</filesToClean>
+ </Config>
+ <Folder name="java">
+  <Folder name="java">
+   <Folder name="beans">
+    <File path="java\beans\all.d" />
+    <File path="java\beans\BeanDescriptor.d" />
+    <File path="java\beans\BeanInfo.d" />
+    <File path="java\beans\FeatureDescriptor.d" />
+    <File path="java\beans\IntrospectionException.d" />
+    <File path="java\beans\Introspector.d" />
+    <File path="java\beans\PropertyChangeEvent.d" />
+    <File path="java\beans\PropertyChangeListener.d" />
+    <File path="java\beans\PropertyChangeSupport.d" />
+    <File path="java\beans\PropertyDescriptor.d" />
+   </Folder>
+   <Folder name="io">
+    <File path="java\io\all.d" />
+    <File path="java\io\BufferedInputStream.d" />
+    <File path="java\io\BufferedReader.d" />
+    <File path="java\io\ByteArrayInputStream.d" />
+    <File path="java\io\ByteArrayOutputStream.d" />
+    <File path="java\io\File.d" />
+    <File path="java\io\FileFilter.d" />
+    <File path="java\io\FileInputStream.d" />
+    <File path="java\io\FileOutputStream.d" />
+    <File path="java\io\InputStream.d" />
+    <File path="java\io\InputStreamReader.d" />
+    <File path="java\io\OutputStream.d" />
+    <File path="java\io\PipedInputStream.d" />
+    <File path="java\io\PipedOutputStream.d" />
+    <File path="java\io\PrintStream.d" />
+    <File path="java\io\PrintWriter.d" />
+    <File path="java\io\PushbackReader.d" />
+    <File path="java\io\RandomAccessFile.d" />
+    <File path="java\io\Reader.d" />
+    <File path="java\io\StringReader.d" />
+    <File path="java\io\StringWriter.d" />
+    <File path="java\io\Writer.d" />
+   </Folder>
+   <Folder name="lang">
+    <Folder name="reflect">
+     <File path="java\lang\reflect\AccessibleObject.d" />
+     <File path="java\lang\reflect\all.d" />
+     <File path="java\lang\reflect\Array.d" />
+     <File path="java\lang\reflect\Constructor.d" />
+     <File path="java\lang\reflect\Field.d" />
+     <File path="java\lang\reflect\InvocationTargetException.d" />
+     <File path="java\lang\reflect\Method.d" />
+     <File path="java\lang\reflect\Package.d" />
+    </Folder>
+    <File path="java\lang\all.d" />
+    <File path="java\lang\Boolean.d" />
+    <File path="java\lang\Byte.d" />
+    <File path="java\lang\Character.d" />
+    <File path="java\lang\Class.d" />
+    <File path="java\lang\Comparable.d" />
+    <File path="java\lang\Double.d" />
+    <File path="java\lang\exceptions.d" />
+    <File path="java\lang\Float.d" />
+    <File path="java\lang\Integer.d" />
+    <File path="java\lang\interfaces.d" />
+    <File path="java\lang\Long.d" />
+    <File path="java\lang\Math.d" />
+    <File path="java\lang\Number.d" />
+    <File path="java\lang\Process.d" />
+    <File path="java\lang\ProcessBuilder.d" />
+    <File path="java\lang\Runnable.d" />
+    <File path="java\lang\Short.d" />
+    <File path="java\lang\String.d" />
+    <File path="java\lang\StringBuffer.d" />
+    <File path="java\lang\System.d" />
+    <File path="java\lang\Thread.d" />
+    <File path="java\lang\ThreadLocal.d" />
+    <File path="java\lang\util.d" />
+    <File path="java\lang\wrappers.d" />
+   </Folder>
+   <Folder name="math">
+    <File path="java\math\all.d" />
+    <File path="java\math\BigDecimal.d" />
+    <File path="java\math\BigInteger.d" />
+   </Folder>
+   <Folder name="net">
+    <File path="java\net\all.d" />
+    <File path="java\net\Authenticator.d" />
+    <File path="java\net\InetAddress.d" />
+    <File path="java\net\MalformedURLException.d" />
+    <File path="java\net\PasswordAuthentication.d" />
+    <File path="java\net\URI.d" />
+    <File path="java\net\URL.d" />
+    <File path="java\net\URLClassLoader.d" />
+    <File path="java\net\URLConnection.d" />
+    <File path="java\net\URLEncoder.d" />
+   </Folder>
+   <Folder name="nio">
+    <File path="java\nio\CharBuffer.d" />
+   </Folder>
+   <Folder name="nonstandard">
+    <File path="java\nonstandard\all.d" />
+    <File path="java\nonstandard\Locale.d" />
+    <File path="java\nonstandard\RuntimeTraits.d" />
+    <File path="java\nonstandard\SafeUtf.d" />
+    <File path="java\nonstandard\SharedLib.d" />
+    <File path="java\nonstandard\UnsafeUtf.d" />
+    <File path="java\nonstandard\UtfBase.d" />
+    <File path="java\nonstandard\WeakRef.d" />
+    <File path="java\nonstandard\XmlTranscode.d" />
+   </Folder>
+   <Folder name="text">
+    <File path="java\text\all.d" />
+    <File path="java\text\AttributedCharacterIterator.d" />
+    <File path="java\text\CharacterIterator.d" />
+    <File path="java\text\Collator.d" />
+    <File path="java\text\DecimalFormat.d" />
+    <File path="java\text\FieldPosition.d" />
+    <File path="java\text\Format.d" />
+    <File path="java\text\MessageFormat.d" />
+    <File path="java\text\NumberFormat.d" />
+    <File path="java\text\ParseException.d" />
+    <File path="java\text\ParsePosition.d" />
+    <File path="java\text\SimpleDateFormat.d" />
+   </Folder>
+   <Folder name="util">
+    <Folder name="prefs">
+     <File path="java\util\prefs\Preferences.d" />
+    </Folder>
+    <Folder name="regex">
+     <File path="java\util\regex\all.d" />
+     <File path="java\util\regex\Matcher.d" />
+     <File path="java\util\regex\Pattern.d" />
+     <File path="java\util\regex\PatternSyntaxException.d" />
+    </Folder>
+    <Folder name="zip">
+     <File path="java\util\zip\all.d" />
+     <File path="java\util\zip\DeflaterOutputStream.d" />
+     <File path="java\util\zip\InflaterInputStream.d" />
+     <File path="java\util\zip\ZipEntry.d" />
+     <File path="java\util\zip\ZipException.d" />
+     <File path="java\util\zip\ZipFile.d" />
+     <File path="java\util\zip\ZipInputStream.d" />
+    </Folder>
+    <File path="java\util\AbstractCollection.d" />
+    <File path="java\util\AbstractList.d" />
+    <File path="java\util\AbstractMap.d" />
+    <File path="java\util\AbstractSet.d" />
+    <File path="java\util\all.d" />
+    <File path="java\util\ArrayList.d" />
+    <File path="java\util\Arrays.d" />
+    <File path="java\util\Collection.d" />
+    <File path="java\util\Collections.d" />
+    <File path="java\util\Comparator.d" />
+    <File path="java\util\Currency.d" />
+    <File path="java\util\Date.d" />
+    <File path="java\util\Dictionary.d" />
+    <File path="java\util\Enumeration.d" />
+    <File path="java\util\EventListener.d" />
+    <File path="java\util\EventObject.d" />
+    <File path="java\util\HashMap.d" />
+    <File path="java\util\HashSet.d" />
+    <File path="java\util\Hashtable.d" />
+    <File path="java\util\IdentityHashMap.d" />
+    <File path="java\util\Iterator.d" />
+    <File path="java\util\LinkedHashMap.d" />
+    <File path="java\util\LinkedList.d" />
+    <File path="java\util\List.d" />
+    <File path="java\util\ListIterator.d" />
+    <File path="java\util\Locale.d" />
+    <File path="java\util\Map.d" />
+    <File path="java\util\MissingResourceException.d" />
+    <File path="java\util\Observable.d" />
+    <File path="java\util\Observer.d" />
+    <File path="java\util\Random.d" />
+    <File path="java\util\ResourceBundle.d" />
+    <File path="java\util\Set.d" />
+    <File path="java\util\SortedMap.d" />
+    <File path="java\util\SortedSet.d" />
+    <File path="java\util\Stack.d" />
+    <File path="java\util\StringTokenizer.d" />
+    <File path="java\util\Timer.d" />
+    <File path="java\util\TimerTask.d" />
+    <File path="java\util\TreeMap.d" />
+    <File path="java\util\TreeSet.d" />
+    <File path="java\util\Vector.d" />
+    <File path="java\util\WeakHashMap.d" />
+   </Folder>
+  </Folder>
+ </Folder>
+</DProject>
