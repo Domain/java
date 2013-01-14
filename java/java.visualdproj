@@ -188,6 +188,18 @@
  </Config>
  <Folder name="java">
   <Folder name="java">
+   <Folder name="awt">
+    <Folder name="geom">
+     <File path="java\awt\geom\AffineTransform.d" />
+    </Folder>
+    <Folder name="image">
+     <File path="java\awt\image\BufferedImage.d" />
+    </Folder>
+    <File path="java\awt\Dimension.d" />
+    <File path="java\awt\Graphics2D.d" />
+    <File path="java\awt\GraphicsEnvironment.d" />
+    <File path="java\awt\RenderingHints.d" />
+   </Folder>
    <Folder name="beans">
     <File path="java\beans\all.d" />
     <File path="java\beans\BeanDescriptor.d" />
@@ -209,22 +221,36 @@
     <File path="java\io\File.d" />
     <File path="java\io\FileFilter.d" />
     <File path="java\io\FileInputStream.d" />
+    <File path="java\io\FilenameFilter.d" />
+    <File path="java\io\FileNotFoundException.d" />
     <File path="java\io\FileOutputStream.d" />
+    <File path="java\io\FilterInputStream.d" />
     <File path="java\io\InputStream.d" />
     <File path="java\io\InputStreamReader.d" />
+    <File path="java\io\InterruptedIOException.d" />
+    <File path="java\io\IOException.d" />
     <File path="java\io\OutputStream.d" />
     <File path="java\io\PipedInputStream.d" />
     <File path="java\io\PipedOutputStream.d" />
     <File path="java\io\PrintStream.d" />
     <File path="java\io\PrintWriter.d" />
+    <File path="java\io\PushbackInputStream.d" />
     <File path="java\io\PushbackReader.d" />
     <File path="java\io\RandomAccessFile.d" />
     <File path="java\io\Reader.d" />
+    <File path="java\io\Serializable.d" />
     <File path="java\io\StringReader.d" />
     <File path="java\io\StringWriter.d" />
+    <File path="java\io\UnsupportedEncodingException.d" />
     <File path="java\io\Writer.d" />
    </Folder>
    <Folder name="lang">
+    <Folder name="annotation">
+     <File path="java\lang\annotation\Annotation.d" />
+     <File path="java\lang\annotation\Retention.d" />
+     <File path="java\lang\annotation\RetentionPolicy.d" />
+     <File path="java\lang\annotation\Target.d" />
+    </Folder>
     <Folder name="reflect">
      <File path="java\lang\reflect\AccessibleObject.d" />
      <File path="java\lang\reflect\all.d" />
@@ -269,16 +295,39 @@
    <Folder name="net">
     <File path="java\net\all.d" />
     <File path="java\net\Authenticator.d" />
+    <File path="java\net\DatagramPacket.d" />
+    <File path="java\net\DatagramSocket.d" />
+    <File path="java\net\Inet4Address.d" />
     <File path="java\net\InetAddress.d" />
+    <File path="java\net\InetSocketAddress.d" />
     <File path="java\net\MalformedURLException.d" />
+    <File path="java\net\MulticastSocket.d" />
+    <File path="java\net\NetworkInterface.d" />
     <File path="java\net\PasswordAuthentication.d" />
+    <File path="java\net\ServerSocket.d" />
+    <File path="java\net\Socket.d" />
+    <File path="java\net\SocketAddress.d" />
+    <File path="java\net\SocketException.d" />
+    <File path="java\net\SocketTimeoutException.d" />
+    <File path="java\net\UnknownHostException.d" />
     <File path="java\net\URI.d" />
+    <File path="java\net\URISyntaxException.d" />
     <File path="java\net\URL.d" />
     <File path="java\net\URLClassLoader.d" />
     <File path="java\net\URLConnection.d" />
+    <File path="java\net\URLDecoder.d" />
     <File path="java\net\URLEncoder.d" />
    </Folder>
    <Folder name="nio">
+    <Folder name="channels">
+     <Folder name="FileChannel">
+      <File path="java\nio\channels\FileChannel\MapMode.d" />
+     </Folder>
+    </Folder>
+    <Folder name="charset">
+     <File path="java\nio\charset\Charset.d" />
+    </Folder>
+    <File path="java\nio\ByteBuffer.d" />
     <File path="java\nio\CharBuffer.d" />
    </Folder>
    <Folder name="nonstandard">
@@ -292,21 +341,69 @@
     <File path="java\nonstandard\WeakRef.d" />
     <File path="java\nonstandard\XmlTranscode.d" />
    </Folder>
+   <Folder name="security">
+    <File path="java\security\Key.d" />
+    <File path="java\security\MessageDigest.d" />
+   </Folder>
+   <Folder name="sql">
+    <File path="java\sql\Blob.d" />
+    <File path="java\sql\Connection.d" />
+    <File path="java\sql\DriverManager.d" />
+    <File path="java\sql\PreparedStatement.d" />
+    <File path="java\sql\ResultSet.d" />
+    <File path="java\sql\SQLDataException.d" />
+    <File path="java\sql\SQLException.d" />
+    <File path="java\sql\Statement.d" />
+    <File path="java\sql\Timestamp.d" />
+   </Folder>
    <Folder name="text">
+    <Folder name="Normalizer">
+     <File path="java\text\Normalizer\Form.d" />
+    </Folder>
     <File path="java\text\all.d" />
     <File path="java\text\AttributedCharacterIterator.d" />
     <File path="java\text\CharacterIterator.d" />
     <File path="java\text\Collator.d" />
+    <File path="java\text\DateFormat.d" />
     <File path="java\text\DecimalFormat.d" />
     <File path="java\text\FieldPosition.d" />
     <File path="java\text\Format.d" />
     <File path="java\text\MessageFormat.d" />
+    <File path="java\text\Normalizer.d" />
     <File path="java\text\NumberFormat.d" />
     <File path="java\text\ParseException.d" />
     <File path="java\text\ParsePosition.d" />
     <File path="java\text\SimpleDateFormat.d" />
    </Folder>
    <Folder name="util">
+    <Folder name="concurrent">
+     <Folder name="atomic">
+      <File path="java\util\concurrent\atomic\AtomicBoolean.d" />
+      <File path="java\util\concurrent\atomic\AtomicInteger.d" />
+      <File path="java\util\concurrent\atomic\AtomicReference.d" />
+     </Folder>
+     <File path="java\util\concurrent\Callable.d" />
+     <File path="java\util\concurrent\CancellationException.d" />
+     <File path="java\util\concurrent\ConcurrentLinkedQueue.d" />
+     <File path="java\util\concurrent\ConcurrentSkipListSet.d" />
+     <File path="java\util\concurrent\ExecutionException.d" />
+     <File path="java\util\concurrent\Executors.d" />
+     <File path="java\util\concurrent\ExecutorService.d" />
+     <File path="java\util\concurrent\Future.d" />
+     <File path="java\util\concurrent\ScheduledExecutorService.d" />
+     <File path="java\util\concurrent\ScheduledFuture.d" />
+     <File path="java\util\concurrent\ThreadFactory.d" />
+     <File path="java\util\concurrent\TimeoutException.d" />
+     <File path="java\util\concurrent\TimeUnit.d" />
+    </Folder>
+    <Folder name="logging">
+     <File path="java\util\logging\Handler.d" />
+     <File path="java\util\logging\Level.d" />
+     <File path="java\util\logging\LogManager.d" />
+    </Folder>
+    <Folder name="Map">
+     <File path="java\util\Map\Entry.d" />
+    </Folder>
     <Folder name="prefs">
      <File path="java\util\prefs\Preferences.d" />
     </Folder>
@@ -316,9 +413,13 @@
      <File path="java\util\regex\Pattern.d" />
      <File path="java\util\regex\PatternSyntaxException.d" />
     </Folder>
+    <Folder name="ResourceBundle">
+     <File path="java\util\ResourceBundle\Control.d" />
+    </Folder>
     <Folder name="zip">
      <File path="java\util\zip\all.d" />
      <File path="java\util\zip\DeflaterOutputStream.d" />
+     <File path="java\util\zip\GZIPInputStream.d" />
      <File path="java\util\zip\InflaterInputStream.d" />
      <File path="java\util\zip\ZipEntry.d" />
      <File path="java\util\zip\ZipException.d" />
@@ -332,6 +433,7 @@
     <File path="java\util\all.d" />
     <File path="java\util\ArrayList.d" />
     <File path="java\util\Arrays.d" />
+    <File path="java\util\Calendar.d" />
     <File path="java\util\Collection.d" />
     <File path="java\util\Collections.d" />
     <File path="java\util\Comparator.d" />
@@ -341,12 +443,14 @@
     <File path="java\util\Enumeration.d" />
     <File path="java\util\EventListener.d" />
     <File path="java\util\EventObject.d" />
+    <File path="java\util\GregorianCalendar.d" />
     <File path="java\util\HashMap.d" />
     <File path="java\util\HashSet.d" />
     <File path="java\util\Hashtable.d" />
     <File path="java\util\IdentityHashMap.d" />
     <File path="java\util\Iterator.d" />
     <File path="java\util\LinkedHashMap.d" />
+    <File path="java\util\LinkedHashSet.d" />
     <File path="java\util\LinkedList.d" />
     <File path="java\util\List.d" />
     <File path="java\util\ListIterator.d" />
@@ -355,6 +459,8 @@
     <File path="java\util\MissingResourceException.d" />
     <File path="java\util\Observable.d" />
     <File path="java\util\Observer.d" />
+    <File path="java\util\Properties.d" />
+    <File path="java\util\Queue.d" />
     <File path="java\util\Random.d" />
     <File path="java\util\ResourceBundle.d" />
     <File path="java\util\Set.d" />
@@ -364,8 +470,10 @@
     <File path="java\util\StringTokenizer.d" />
     <File path="java\util\Timer.d" />
     <File path="java\util\TimerTask.d" />
+    <File path="java\util\TimeZone.d" />
     <File path="java\util\TreeMap.d" />
     <File path="java\util\TreeSet.d" />
+    <File path="java\util\UUID.d" />
     <File path="java\util\Vector.d" />
     <File path="java\util\WeakHashMap.d" />
    </Folder>

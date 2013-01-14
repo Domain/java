@@ -6,7 +6,6 @@ import java.lang.String;
 version(Tango){
     static import tango.core.Exception;
     public alias tango.core.Exception.IllegalArgumentException IllegalArgumentException;
-    public alias tango.core.Exception.IOException IOException;
     public alias tango.core.Exception.PlatformException PlatformException;
     public alias tango.core.Exception.ArrayBoundsException ArrayIndexOutOfBoundsException;
     public alias tango.core.Exception.NoSuchElementException NoSuchElementException;
@@ -24,12 +23,6 @@ version(Tango){
     }
 
     class IllegalArgumentException : Exception {
-        this( String e = null ){
-            super(e);
-        }
-    }
-
-    class IOException : Exception {
         this( String e = null ){
             super(e);
         }

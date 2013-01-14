@@ -5,6 +5,11 @@ import java.lang.exceptions;
 
 public class Normalizer
 {
+	enum Form
+	{
+		NFD
+	}
+
     public this()
     {
         implMissing();

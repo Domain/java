@@ -54,7 +54,7 @@ public class BufferedInputStream : java.io.InputStream.InputStream {
             istr = null;
         }
     }
-    public int read(){
+    override public int read(){
         synchronized {
             if( pos >= count ){
                 fill();
@@ -66,15 +66,15 @@ public class BufferedInputStream : java.io.InputStream.InputStream {
         }
     }
 
-    public int read( byte[] b, int off, int len ){
+    override public int read( byte[] b, int off, int len ){
         synchronized return super.read( b, off, len );
     }
 
-    public long skip( long n ){
+    override public long skip( long n ){
         synchronized return this.istr.skip(n);
     }
 
-    public int available(){
+    override public int available(){
         synchronized {
             int istr_avail = 0;
             if( istr !is null ){
@@ -84,22 +84,22 @@ public class BufferedInputStream : java.io.InputStream.InputStream {
         }
     }
 
-    public synchronized void mark( int readlimit ){
+    override public synchronized void mark( int readlimit ){
         implMissing( __FILE__, __LINE__ );
         this.istr.mark( readlimit );
     }
 
-    public synchronized void reset(){
+    override public synchronized void reset(){
         implMissing( __FILE__, __LINE__ );
         this.istr.reset();
     }
 
-    public bool markSupported(){
+    override public bool markSupported(){
         implMissing( __FILE__, __LINE__ );
         return false;
     }
 
-    public void close(){
+    override public void close(){
         if (this.istr !is null) {
             this.istr.close();
         }
