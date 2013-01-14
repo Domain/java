@@ -11,10 +11,10 @@ public final class LoggerFactory {
 		
 	}
 
-	private LoggerFactory _instance;
+	private static LoggerFactory _instance;
 
 	public static Logger getLogger(Class)() {
-		if (_instance == null)
+		if (_instance is null)
 			_instance = new LoggerFactory();
 		auto name = fullyQualifiedName!(Class);
 		if (name !in loggers)
