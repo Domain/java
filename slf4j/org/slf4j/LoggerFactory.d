@@ -5,20 +5,20 @@ import std.traits;
 import org.slf4j.Logger;
 
 public final class LoggerFactory {
-	private Logger[string] loggers;
+    private Logger[string] loggers;
 
-	private this() {
-		
-	}
+    private this() {
+        
+    }
 
-	private static LoggerFactory _instance;
+    private static LoggerFactory _instance;
 
-	public static Logger getLogger(Class)() {
-		if (_instance is null)
-			_instance = new LoggerFactory();
-		auto name = fullyQualifiedName!(Class);
-		if (name !in loggers)
-			_instance.loggers[name] = new Logger(name);
-		return _instance.loggers[name];
-	}
+    public static Logger getLogger(alias Class)() {
+        if (_instance is null)
+            _instance = new LoggerFactory();
+        auto name = fullyQualifiedName!Class;
+        if (name !in _instance.loggers)
+            _instance.loggers[name] = new Logger(name);
+        return _instance.loggers[name];
+    }
 }
