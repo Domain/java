@@ -283,6 +283,7 @@
     <File path="java\lang\StringBuffer.d" />
     <File path="java\lang\System.d" />
     <File path="java\lang\Thread.d" />
+    <File path="java\lang\ThreadGroup.d" />
     <File path="java\lang\ThreadLocal.d" />
     <File path="java\lang\util.d" />
     <File path="java\lang\wrappers.d" />
