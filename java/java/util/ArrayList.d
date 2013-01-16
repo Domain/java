@@ -20,19 +20,19 @@ class ArrayList(T) : AbstractList!T, List!T {
         this(cast(int)(col.size*1.1));
         addAll(col);
     }
-    void   add(int index, T element){
+    override void   add(int index, T element){
         data.length = data.length +1;
         System.arraycopy( data, index, data, index+1, data.length - index -1 );
         data[index] = element;
     }
-    bool    add(T o){
+    override bool    add(T o){
         data ~= o;
         return true;
     }
-    public bool    add(String o){
+    override public bool    add(String o){
         return add(stringcast(o));
     }
-    bool    addAll(Collection!T c){
+    override bool    addAll(Collection!T c){
         if( c.size() is 0 ) return false;
         uint idx = data.length;
         data.length = data.length + c.size();
@@ -41,18 +41,18 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return true;
     }
-    bool    addAll(int index, Collection!T c){
+    override bool    addAll(int index, Collection!T c){
         implMissing( __FILE__, __LINE__ );
         return false;
     }
-    void   clear(){
+    override void   clear(){
         data.length = 0;
     }
     ArrayList clone(){
         implMissing( __FILE__, __LINE__ );
         return null;
     }
-    bool    contains(T o){
+    override bool    contains(T o){
         foreach( v; data ){
             if( o is v ){
                 return true;
@@ -69,11 +69,11 @@ class ArrayList(T) : AbstractList!T, List!T {
     bool    contains(String o){
         return contains(stringcast(o));
     }
-    bool    containsAll(Collection!T c){
+    override bool    containsAll(Collection!T c){
         implMissing( __FILE__, __LINE__ );
         return false;
     }
-    equals_t opEquals(T o){
+    override equals_t opEquals(T o){
         if( auto other = cast(ArrayList)o ){
             if( data.length !is other.data.length ){
                 return false;
@@ -94,7 +94,7 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return false;
     }
-    T     get(int index){
+    override T     get(int index){
         return data[index];
     }
     public override hash_t toHash(){
@@ -106,7 +106,7 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return hashCode;
     }
-    int    indexOf(T o){
+    override int    indexOf(T o){
         foreach( i, v; data ){
             if( data[i] is o ){
                 return i;
@@ -120,10 +120,10 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return -1;
     }
-    bool    isEmpty(){
+    override bool    isEmpty(){
         return data.length is 0;
     }
-    class LocalIterator : Iterator{
+    class LocalIterator(T) : Iterator!T{
         int idx = -1;
         public this(){
         }
@@ -142,10 +142,10 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
     }
 
-    Iterator   iterator(){
-        return new LocalIterator();
+    Iterator!T   iterator(){
+        return new LocalIterator!T();
     }
-    int    lastIndexOf(T o){
+    override int    lastIndexOf(T o){
         foreach_reverse( i, v; data ){
             if( data[i] is o ){
                 return i;
@@ -160,7 +160,7 @@ class ArrayList(T) : AbstractList!T, List!T {
         return -1;
     }
 
-    class LocalListIterator : ListIterator {
+    class LocalListIterator(T) : ListIterator!T {
         int idx_next = 0;
         public bool hasNext(){
             return idx_next < data.length;
@@ -200,20 +200,20 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
     }
 
-    ListIterator   listIterator(){
-        return new LocalListIterator();
+    ListIterator!T   listIterator(){
+        return new LocalListIterator!T();
     }
-    ListIterator   listIterator(int index){
+    ListIterator!T   listIterator(int index){
         implMissing( __FILE__, __LINE__ );
         return null;
     }
-    T     remove(int index){
+    override T     remove(int index){
         T res = data[index];
         System.arraycopy( data, index+1, data, index, data.length - index - 1 );
         data.length = data.length -1;
         return res;
     }
-    bool    remove(T o){
+    override bool    remove(T o){
         int idx = -1;
         for( int i = 0; i < data.length; i++ ){
             if( data[i] is null ? o is null : data[i] == o ){
@@ -230,36 +230,36 @@ class ArrayList(T) : AbstractList!T, List!T {
         data.length = data.length - 1;
         return true;
     }
-    public bool remove(String key){
+    override public bool remove(String key){
         return remove(stringcast(key));
     }
-    bool    removeAll(Collection!T c){
+    override bool    removeAll(Collection!T c){
         implMissing( __FILE__, __LINE__ );
         return false;
     }
-    bool    retainAll(Collection!T c){
+    override bool    retainAll(Collection!T c){
         implMissing( __FILE__, __LINE__ );
         return false;
     }
-    protected  void     removeRange(int fromIndex, int toIndex){
+    override protected  void     removeRange(int fromIndex, int toIndex){
         implMissing( __FILE__, __LINE__ );
     }
-    T     set(int index, T element){
+    override T     set(int index, T element){
         T res = data[index];
         data[index] = element;
         return res;
     }
-    int    size(){
+    override int    size(){
         return data.length;
     }
-    List   subList(int fromIndex, int toIndex){
+    List!T   subList(int fromIndex, int toIndex){
         implMissing( __FILE__, __LINE__ );
         return null;
     }
-    T[]   toArray(){
+    override T[]   toArray(){
         return data.dup;
     }
-    T[]   toArray(T[] a){
+    override T[]   toArray(T[] a){
         if( data.length <= a.length ){
             a[ 0 .. data.length ] = data;
         }
@@ -271,32 +271,32 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return a;
     }
-    String[]   toArray(String[] a){
-        version(Tango){
-            auto res = a;
-            if( res.length < data.length ){
-                res.length = data.length;
-            }
-            int idx = 0;
-            foreach( o; data ){
-                res[idx] = stringcast(o);
-            }
-            return res;
-        } else { // Phobos
-            implMissingInPhobos();
-            return null;
-        }
-    }
+	//String[]   toArray(String[] a){
+	//    version(Tango){
+	//        auto res = a;
+	//        if( res.length < data.length ){
+	//            res.length = data.length;
+	//        }
+	//        int idx = 0;
+	//        foreach( o; data ){
+	//            res[idx] = stringcast(o);
+	//        }
+	//        return res;
+	//    } else { // Phobos
+	//        implMissingInPhobos();
+	//        return null;
+	//    }
+	//}
 
     // only for D
-    public int opApply (int delegate(ref T value) dg){
+    override public int opApply (int delegate(ref T value) dg){
         foreach( o; data ){
             auto res = dg( o );
             if( res ) return res;
         }
         return 0;
     }
-    public String toString(){
+    override public String toString(){
         return super.toString();
     }
 }
