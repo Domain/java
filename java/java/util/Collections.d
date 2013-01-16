@@ -318,7 +318,7 @@ class Collections {
         override public equals_t opEquals(Object o){ synchronized(this){ return this.map.opEquals(o); } }
         public V get(K key){ synchronized(this){ return this.map.get(key); } }
         //public Object get(String key){ synchronized(this){ return this.map.get(key); } }
-        public hash_t toHash(){ return this.map.toHash(); }
+        override public hash_t toHash(){ return this.map.toHash(); }
         public bool isEmpty(){ synchronized(this){ return this.map.isEmpty(); } }
         public Set!K    keySet(){ synchronized(this){ return this.map.keySet(); } }
         public V put(K key, V value){ synchronized(this){ return this.map.put(key,value); } }

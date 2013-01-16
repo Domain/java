@@ -112,16 +112,19 @@ IDwtLogger getDwtLogger(){
     return dwtLoggerInstance;
 }
 
-void implMissing(String file = __FILE__, uint line = __LINE__){
-	implMissing(file, line);
-}
-
-void implMissing( String file, uint line ){
-    getDwtLogger().fatal( file, line, "implementation missing in file {} line {}", file, line );
+void implMissing(String file = __FILE__, uint line = __LINE__, T...)(lazy T args){
+	getDwtLogger().fatal( file, line, "implementation missing in file {} line {}", file, line );
     getDwtLogger().fatal( file, line, "Please create a bug report at http://www.dsource.org/projects/dwt" );
     getDwtLogger().fatal( file, line, "exiting ..." );
     exit(1);
 }
+
+//void implMissing( String file, uint line ){
+//    getDwtLogger().fatal( file, line, "implementation missing in file {} line {}", file, line );
+//    getDwtLogger().fatal( file, line, "Please create a bug report at http://www.dsource.org/projects/dwt" );
+//    getDwtLogger().fatal( file, line, "exiting ..." );
+//    exit(1);
+//}
 
 void implMissingInTango(T = void)( String file, uint line ) {
     version(Tango) {} else static assert(0, "For Tango implMissings only");
