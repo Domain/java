@@ -142,7 +142,7 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
     }
 
-    Iterator!T   iterator(){
+    override Iterator!T   iterator(){
         return new LocalIterator!T();
     }
     override int    lastIndexOf(T o){
@@ -200,10 +200,10 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
     }
 
-    ListIterator!T   listIterator(){
+    override ListIterator!T   listIterator(){
         return new LocalListIterator!T();
     }
-    ListIterator!T   listIterator(int index){
+    override ListIterator!T   listIterator(int index){
         implMissing( __FILE__, __LINE__ );
         return null;
     }
@@ -252,7 +252,7 @@ class ArrayList(T) : AbstractList!T, List!T {
     override int    size(){
         return data.length;
     }
-    List!T   subList(int fromIndex, int toIndex){
+    override List!T   subList(int fromIndex, int toIndex){
         implMissing( __FILE__, __LINE__ );
         return null;
     }
@@ -271,22 +271,22 @@ class ArrayList(T) : AbstractList!T, List!T {
         }
         return a;
     }
-	//String[]   toArray(String[] a){
-	//    version(Tango){
-	//        auto res = a;
-	//        if( res.length < data.length ){
-	//            res.length = data.length;
-	//        }
-	//        int idx = 0;
-	//        foreach( o; data ){
-	//            res[idx] = stringcast(o);
-	//        }
-	//        return res;
-	//    } else { // Phobos
-	//        implMissingInPhobos();
-	//        return null;
-	//    }
-	//}
+    //String[]   toArray(String[] a){
+    //    version(Tango){
+    //        auto res = a;
+    //        if( res.length < data.length ){
+    //            res.length = data.length;
+    //        }
+    //        int idx = 0;
+    //        foreach( o; data ){
+    //            res[idx] = stringcast(o);
+    //        }
+    //        return res;
+    //    } else { // Phobos
+    //        implMissingInPhobos();
+    //        return null;
+    //    }
+    //}
 
     // only for D
     override public int opApply (int delegate(ref T value) dg){
