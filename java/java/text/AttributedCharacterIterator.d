@@ -35,20 +35,20 @@ interface AttributedCharacterIterator : CharacterIterator {
             return null;
         }
 
-        String toString(){
+        override String toString(){
             implMissing(__FILE__, __LINE__);
             return null;
         }
 
     }
-    Set getAllAttributeKeys();
+    Set!Attribute getAllAttributeKeys();
     Object getAttribute(AttributedCharacterIterator.Attribute attribute);
-    Map getAttributes();
+    Map!(Attribute, Object) getAttributes();
     int getRunLimit();
     int getRunLimit(AttributedCharacterIterator.Attribute attribute);
-    int getRunLimit(Set attributes);
+    int getRunLimit(Set!Attribute attributes);
     int getRunStart();
     int getRunStart(AttributedCharacterIterator.Attribute attribute);
-    int getRunStart(Set attributes);
+    int getRunStart(Set!Attribute attributes);
 }
 

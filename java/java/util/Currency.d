@@ -35,7 +35,7 @@ class Currency{
         return null;
     }
 
-    String toString(){
+    override String toString(){
         implMissing(__FILE__, __LINE__);
         return null;
     }

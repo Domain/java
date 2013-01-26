@@ -29,7 +29,7 @@ class ParsePosition{
     void setIndex(int index){
         implMissing(__FILE__, __LINE__);
     }
-    String toString(){
+    override String toString(){
         implMissing(__FILE__, __LINE__);
         return null;
     }

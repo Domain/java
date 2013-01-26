@@ -5,13 +5,13 @@ import java.lang.util;
 import java.lang.String;
 
 version(Tango){
-	static import tango.core.Exception;
+    static import tango.core.Exception;
     public alias tango.core.Exception.IOException IOException;
 }
 else {
-	static import core.exception;
+    static import core.exception;
 
-	class IOException : Exception {
+    class IOException : Exception {
         this( String e = null ){
             super(e);
         }

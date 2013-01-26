@@ -266,6 +266,7 @@
     <File path="java\lang\Byte.d" />
     <File path="java\lang\Character.d" />
     <File path="java\lang\Class.d" />
+    <File path="java\lang\Cloneable.d" />
     <File path="java\lang\Comparable.d" />
     <File path="java\lang\Double.d" />
     <File path="java\lang\exceptions.d" />
@@ -278,13 +279,16 @@
     <File path="java\lang\Process.d" />
     <File path="java\lang\ProcessBuilder.d" />
     <File path="java\lang\Runnable.d" />
+    <File path="java\lang\RuntimeException.d" />
     <File path="java\lang\Short.d" />
     <File path="java\lang\String.d" />
     <File path="java\lang\StringBuffer.d" />
+    <File path="java\lang\StringBuilder.d" />
     <File path="java\lang\System.d" />
     <File path="java\lang\Thread.d" />
     <File path="java\lang\ThreadGroup.d" />
     <File path="java\lang\ThreadLocal.d" />
+    <File path="java\lang\UnsupportedOperationException.d" />
     <File path="java\lang\util.d" />
     <File path="java\lang\wrappers.d" />
    </Folder>

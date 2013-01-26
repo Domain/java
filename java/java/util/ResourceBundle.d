@@ -152,7 +152,7 @@ nextline:
         throw new MissingResourceException( "key not found", this.classinfo.name, key._idup() );
     }
 
-    public Enumeration getKeys(){
+    public Enumeration!String getKeys(){
         implMissing(__FILE__,__LINE__);
         return null;
     }
@@ -181,6 +181,14 @@ nextline:
     }
     public static ResourceBundle getBundleFromData( String data ){
         return new ResourceBundle( data );
+    }
+
+    public static class Control
+    {
+        public this()
+        {
+            implMissing();
+        }
     }
 }
 
