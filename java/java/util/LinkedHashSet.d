@@ -3,7 +3,7 @@ module java.util.LinkedHashSet;
 
 import java.lang.exceptions;
 
-public class LinkedHashSet
+public class LinkedHashSet(T)
 {
     public this()
     {
